@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Note Authentication</title>
+</head>
+<body>
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>BANK NOTE AUTHENTICATION</h2>
+	    <hr></hr>
+	    <h3>Variance:</h3>
+            <input id="first" name="variance" type="number" required="required">
+	    <h3>Skewness:</h3>
+	    <input id="second" name="skewness" type="number required="required">
+	    <h3>Curtosis:</h3>
+	    <input id="third" name="curtosis" type="number" required="required">
+	    <h4>Entropy:</h4>
+	    <input id="fourth" name="entropy" type="number" required="required">
+            <br><br><button id="sub" type="submit ">CHECK</button>
+            <br>
+        </form>
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+    <style>
+        body {
+            background-image : url("/images/bg.jpeg");
+	    background-color : #cccc;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
